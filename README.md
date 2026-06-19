@@ -1,6 +1,6 @@
 # spotify_player
 
-another change. wow
+another change.
 
 ## Table of Contents
 
