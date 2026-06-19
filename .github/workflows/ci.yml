@@ -23,8 +23,12 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install libssl-dev libasound2-dev libdbus-1-dev libxcb-shape0-dev libxcb-xfixes0-dev
+        if: ${{ runner.os == 'Linux' }}
+
       - name: Checkout source
-        uses: actions/checkout@v4
+        uses: namespacelabs/nscloud-checkout-action@v9
 
       - name: Install Rust toolchain
         id: install_toolchain
