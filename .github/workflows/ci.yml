@@ -38,7 +38,7 @@ jobs:
           components: clippy, rustfmt
 
       - name: Cache cargo deps
-        uses: actions/cache@v3
+        uses: namespacelabs/nscloud-cache-action@v1
         with:
           path: |
             ~/.cargo/registry/index/
@@ -63,7 +63,7 @@ jobs:
     runs-on: namespace-profile-ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: namespacelabs/nscloud-checkout-action@v9
 
       - name: Machete
         uses: bnjbvr/cargo-machete@main
@@ -75,7 +75,7 @@ jobs:
     runs-on: namespace-profile-ubuntu-latest
     steps:
       - name: Checkout Actions Repository
-        uses: actions/checkout@v4
+        uses: namespacelabs/nscloud-checkout-action@v9
 
       - name: Check spelling of entire workspace
         uses: crate-ci/typos@master
