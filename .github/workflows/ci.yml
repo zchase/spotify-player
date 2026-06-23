@@ -49,9 +49,9 @@ jobs:
         with:
           cache: rust
           path: |
-              /home/runner/.cargo/registry
-              /home/runner/.cargo/git
-              /home/runner/.cargo/.global-cache
+              ~/.cargo/registry
+              ~/.cargo/git
+              ~/.cargo/.global-cache
           # path: |
           #   ~/.cargo/registry/index/
           #   ~/.cargo/registry/cache/
