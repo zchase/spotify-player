@@ -28,7 +28,12 @@ jobs:
         if: ${{ runner.os == 'Linux' }}
 
       - name: Checkout source
+        uses: actions/checkout@v4
+        if: ${{ runner.os == 'Windows' }}
+
+      - name: Checkout source
         uses: namespacelabs/nscloud-checkout-action@v9
+        if: ${{ runner.os != 'Windows' }}
 
       - name: Install Rust toolchain
         id: install_toolchain
