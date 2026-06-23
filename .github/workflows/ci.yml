@@ -48,10 +48,7 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         with:
           cache: rust
-          path: |
-              ~/runner/.cargo/registry
-              ~/runner/.cargo/git
-              ~/runner/.cargo/.global-cache
+          fail-on-cache-miss: true
           # path: |
           #   ~/.cargo/registry/index/
           #   ~/.cargo/registry/cache/
