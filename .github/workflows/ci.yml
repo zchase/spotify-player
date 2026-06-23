@@ -48,7 +48,6 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         with:
           cache: rust
-          fail-on-cache-miss: true
           # path: |
           #   ~/.cargo/registry/index/
           #   ~/.cargo/registry/cache/
@@ -60,13 +59,13 @@ jobs:
         run: cargo fmt --all -- --check
 
       - name: Cargo test
-        run: cargo test --no-default-features --features ${{ env.RUST_FEATURES }}
+        run: cargo test --no-default-features --features ${{ env.RUST_FEATURES }} --verbose
 
       - name: Cargo clippy with all features
-        run: cargo clippy --no-default-features --features ${{ env.RUST_FEATURES }} -- -D warnings
+        run: cargo clippy --verbose --no-default-features --features ${{ env.RUST_FEATURES }} -- -D warnings
 
       - name: Cargo clippy without features
-        run: cargo clippy --no-default-features -- -D warnings
+        run: cargo clippy --verbose --no-default-features -- -D warnings
 
   cargo-machete:
     runs-on: namespace-profile-ubuntu-latest
