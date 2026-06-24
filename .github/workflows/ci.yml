@@ -60,7 +60,7 @@ jobs:
         run: cargo clippy --no-default-features -- -D warnings
 
   cargo-machete:
-    runs-on: ubuntu-latest
+    runs-on: namespace-profile-rust-ubuntu
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -72,7 +72,7 @@ jobs:
     # https://github.com/crate-ci/typos
     # install and run locally: cargo install typos-cli && typos
     name: typos
-    runs-on: ubuntu-latest
+    runs-on: namespace-profile-rust-ubuntu
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
