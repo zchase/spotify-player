@@ -1,6 +1,6 @@
 # spotify_player
 
-a change. 5/7
+a change. 6/7
 
 ## Table of Contents
 
