@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macOS-latest, windows-latest, ubuntu-latest]
+        os: [namespace-profile-rust-macos, namespace-profile-rust-windows, namespace-profile-rust-ubuntu]
         toolchain: [stable]
 
     runs-on: ${{ matrix.os }}
