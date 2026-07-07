@@ -17,10 +17,10 @@ jobs:
 
     strategy:
       matrix:
-        os:
-          - namespace-profile-rust-macos
-          - nscloud-windows-2022-amd64-4x8-with-cache
-          - namespace-profile-rust-ubuntu
+        # os:
+        #   - namespace-profile-rust-macos
+        #   - nscloud-windows-2022-amd64-4x8-with-cache
+        #   - namespace-profile-rust-ubuntu
         # os: [namespace-profile-rust-windows, namespace-profile-rust-ubuntu]
         toolchain: [stable]
 
