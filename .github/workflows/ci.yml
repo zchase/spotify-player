@@ -17,17 +17,11 @@ jobs:
 
     strategy:
       matrix:
-        # os:
-        #   - namespace-profile-rust-macos
-        #   - nscloud-windows-2022-amd64-4x8-with-cache
-        #   - namespace-profile-rust-ubuntu
+        os: [namespace-profile-rust-macos, namespace-profile-rust-windows, namespace-profile-rust-ubuntu]
         # os: [namespace-profile-rust-windows, namespace-profile-rust-ubuntu]
         toolchain: [stable]
 
-    runs-on: #${{ matrix.os }}
-      - nscloud-windows-2022-amd64-4x8-with-cache
-      - nscloud-cache-size-50gb
-      - nscloud-cache-tag-spotify-player-windows
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Install dependencies
