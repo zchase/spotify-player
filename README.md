@@ -1,6 +1,6 @@
 # spotify_player
 
-a change. windows 7
+a change. windows 8
 
 ## Table of Contents
 
