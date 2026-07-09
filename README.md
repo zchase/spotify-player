@@ -1,6 +1,6 @@
 # spotify_player
 
-a change. windows 10
+a change. windows 9
 
 ## Table of Contents
 
