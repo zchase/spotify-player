@@ -1,6 +1,6 @@
 # spotify_player
 
-a change. windows 11
+a change. windows 12
 
 ## Table of Contents
 
